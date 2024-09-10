@@ -41,7 +41,7 @@ def delete_bucket(bucket_name):
 
 if __name__ == "__main__":
     # Variables
-    bucket_name = 'my_unique_bucket_name_123456' # Replace with your unique bucket name
+    bucket_name = 'my-s3-project-bucket-2024' # Replace with your unique bucket name
     region = 'sa-east-1'
     file_path ='sample_data/sample_file.csv'
     object_name = 'data/uploaded_file.csv'
