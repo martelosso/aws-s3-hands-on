@@ -29,7 +29,7 @@ def download_file_from_s3(bucket_name, object_name, download_path):
     s3.download_file(bucket_name, object_name, download_path)
 
 # Function to delete a file from S3
-def delete_file_from_s3(bucket_name):
+def delete_file_from_s3(bucket_name, object_name):
     s3.delete_object(Bucket=bucket_name, Key=object_name)
     print(f"File {object_name} deleted from bucket {bucket_name}")
 
@@ -41,8 +41,8 @@ def delete_bucket(bucket_name):
 
 if __name__ == "__main__":
     # Variables
-    bucket_name = 'my_unique_bucket_name-123456' # Replace with your unique bucket name
-    region = 'us-wes-2'
+    bucket_name = 'my_unique_bucket_name_123456' # Replace with your unique bucket name
+    region = 'sa-east-1'
     file_path ='sample_data/sample_file.csv'
     object_name = 'data/uploaded_file.csv'
     download_path = 'downloaded_file.csv'
